@@ -2,7 +2,7 @@
 
 require "./gcd.rb"
 
-# define la clase Perro 
+# define la clase Fraccion
 class Fraccion
 
 # método inicializar clase
