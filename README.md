@@ -11,5 +11,8 @@ Posteriormente hay que realizar una implementación un conjunto de Pruebas Unita
 comprobar el correcto funcionamiento de la clase que implementa a los números racionales.
 
 
-*Para ejectutar la practica:*
-    $ rake test
+  Para ejecutar la practica:
+
+      $ rake test
+
+    
