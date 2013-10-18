@@ -1,7 +1,7 @@
 Práctica de Laboratorio #5. Pruebas Unitarias   
 ================
 
-##Rushil Lakhani Lakhani
+Rushil Lakhani Lakhani
 
 2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
 
