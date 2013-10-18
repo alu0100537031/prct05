@@ -6,4 +6,4 @@ def gcd(u, v) # Calcula el mcd entre dos numeros
   u #r eturn(u) , el ultimo valor que se indica es el que devuelve
 end
 
-puts gcd(20,8)
+
