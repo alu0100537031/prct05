@@ -1,0 +1,60 @@
+Práctica de Laboratorio #5. Pruebas Unitarias   
+================
+
+##Rushil Lakhani Lakhani
+
+2.1.) ¿Cuál es el error en el código del método para calcular el máximo común divisor?
+
+
+	1  def gcd(u, v)
+	2    u, v = u.abs, v.abs
+	3    while v == 0
+	4      u, v = v, u % v
+	5    end
+
+        En la línea 3 en la que estaba el while, la condición no debía ser while v == 0 ya que de esta forma nunca entraria en el bucle.
+        La condición debe ser while v != 0.
+        
+2.2.) ¿Qué comandos del depurador utilizó para detectarlo? Describa la sesión de depuración.
+
+       Introduciendo un breakpoint en la linea 3 (while) y mirando el contenido de u y v en ese momento, se comprueba que no se efectua el uso
+       de la funcion.
+       (rdb:1) b 3
+       Set breakpoint 1 at gcd.rb:3
+      
+        n : Ejecuta la siguiente sentencia.
+        s : Da un paso dentro de un método.
+        l : Muestra el código y la situación actual dentro del mismo.
+        w : Muestra el fichero actual.
+        v l : Muestra un listado de las variables locales.
+
+        (rdb:1) n
+        gcd.rb:1:def gcd(u, v)
+        (rdb:1) l
+        [-4, 5] in gcd.rb
+        => 1  def gcd(u, v)
+           2    u, v = u.abs, v.abs
+           3    while v != 0
+           4      u, v = v, u % v
+           5    end
+        (rdb:1) s
+        gcd.rb:9:puts gcd(10,20)
+        (rdb:1) s
+        gcd.rb:2:  u, v = u.abs, v.abs
+        (rdb:1) s
+        gcd.rb:3:  while v > 0
+        (rdb:1) v l
+          u => 64
+          v => 31
+        (rdb:1) s
+        gcd.rb:4:    u, v = v, u % v
+        gcd.rb:6:  u
+        (rdb:1) v l
+          u => 1
+          v => 0
+        (rdb:1) s
+        1
+        
+ 2.3.) Escriba la dirección 'HTTP' del repositorio que contiene el desarrollo de su práctica.
+ 
+    https://github.com/alu0100537031/prct05
